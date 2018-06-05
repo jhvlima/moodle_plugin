@@ -1,7 +1,5 @@
 *.conf
 moodle/*
-*/
-!ws/
 *.sh
 *.zip
 *.json
