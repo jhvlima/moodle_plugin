@@ -1,7 +1,7 @@
 <?php
 
-include("commands_pg.php"); // commands for postgresql instances
-// include("commands_mysql.php"); // commands for mysql instances
+//include("commands_pg.php"); // commands for postgresql instances
+include("commands_mysql.php"); // commands for mysql instances
 
 if($_POST){
   
