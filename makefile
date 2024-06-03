@@ -1,4 +1,4 @@
-DIR = moodle/teste
+DIR = moodle/atv2
 
 atividade = docs-tjsp-t2-1-2-21
 aluno = 30-76
@@ -10,6 +10,12 @@ download:
 
 upload:
 	php5.6 upload.php -d ./$(DIR)/$(atividade) --conf Moodle6.conf
+
+DIR_ATIVIDADES= ./atividades/
+x:
+	php5.6 download.php -d $(DIR_ATIVIDADES) --conf Moodle6.conf
+	./checa_pastas.sh $(DIR_ATIVIDADES)
+	php5.6 upload.php -d $(DIR_ATIVIDADES) --conf Moodle6.conf
 
 enviaLinks:
 # executa o script para gerar o lista de links

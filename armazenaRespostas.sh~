@@ -13,3 +13,5 @@ output_file="output.csv"     # Output CSV file
 # formata as linhas em um csv
 grep '#' "$input_file" | sed 's/# //; s/ | /;/g' > "$output_file"
 
+# novos comandos
+awk -F "#" '{print $2}' exResposta.html | awk -F "|" '{print $1";"$2";"$3}'
