@@ -1,14 +1,15 @@
-DIR = moodle/tempo
+DIR = moodle/teste
 
-atividade = docs-tjsp-t2-1-17
+atividade = docs-tjsp-t2-1-2-21
 aluno = 30-76
 path_aluno=$(DIR)/$(atividade)/notastreino.csv
 
 download:
+	mkdir -p $(DIR)
 	php5.6 download.php -d ./$(DIR)/ --conf Moodle6.conf
 
 upload:
-	php5.6 upload.php -d ./$(DIR)/ --conf Moodle6.conf
+	php5.6 upload.php -d ./$(DIR)/$(atividade) --conf Moodle6.conf
 
 enviaLinks:
 # executa o script para gerar o lista de links
