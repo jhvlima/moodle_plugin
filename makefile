@@ -17,6 +17,14 @@ x:
 	./checa_pastas.sh $(DIR_ATIVIDADES)
 	php5.6 upload.php -d $(DIR_ATIVIDADES) --conf Moodle6.conf
 
+ARQ_LINKS= ""
+formataLinks:
+	shuf -n 1 listaLinks.txt >> $(ARQ_LINKS)
+	sed -i 's#^#<li>#g; s#$$#</li>#g;' $(ARQ_LINKS)
+	sed -i '1i <ol>' $(ARQ_LINKS)
+	sed -i '$$a\''\n''</ol>' $(ARQ_LINKS)
+
+
 enviaLinks:
 # executa o script para gerar o lista de links
 #./geraListaLinks.sh

@@ -1,6 +1,5 @@
 *.conf
 moodle/*
-*.sh
 *.zip
 *.json
 *.jar
