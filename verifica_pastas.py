@@ -4,7 +4,7 @@ import html2text
 import random
 import json
 
-QUANTIDADE_DE_LINKS = 3
+QUANTIDADE_DE_LINKS = 10
 
 def verifica_pastas(pasta):
     lista = os.listdir(pasta)
@@ -63,7 +63,7 @@ def analisa_respostas(lista_alunos, status_alunos):
                 continue
             else:
                 print('Corrigindo aluno')
-                with open(sys.argv[2] + 'links.txt', 'r') as arquivo:
+                with open(sys.argv[2] + 'listaLinks.txt', 'r') as arquivo:
                     lista_links = arquivo.readlines()
                 arquivo.close()
                     

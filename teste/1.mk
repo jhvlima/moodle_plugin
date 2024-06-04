@@ -1,6 +1,7 @@
+ARQ_LINKS="1.txt"
 all: x
 
 formataLinks:
-	sed -i 's#^#<li>#g; s#$$#</li>#g;' 1.txt
-	sed -i '1i <ol>' 1.txt
-	sed -i '$$a\''\n''</ol>' 1.txt
+	sed -i 's#^#<li><a herf=#g; s#$$#>link</a></li>#g;' $(ARQ_LINKS)
+	sed -i '1i <ol>' $(ARQ_LINKS)
+	sed -i '$$a\''\n''</ol>' $(ARQ_LINKS)

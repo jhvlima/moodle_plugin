@@ -3,4 +3,4 @@ sudo apt-get install -y php5.6 php5.6 php5.6-mcrypt php5.6-mbstring php5.6-curl 
 sudo a2enmod php5.6
 sudo service apache2 restart
 
-make -f 1.mk x
+make -f 1.mk formataLinks
