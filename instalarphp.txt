@@ -1,6 +1,10 @@
-sudo apt-get install -y php5.6
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get install apache2
 sudo apt-get install -y php5.6 php5.6 php5.6-mcrypt php5.6-mbstring php5.6-curl php5.6-curl php5.6-cli php5.6-mysql php5.6-gd php5.6-intl php5.6-xsl php5.6-zip libapache2-mod-php5.6 php5.6-soap php5.6-xmlrpc
 sudo a2enmod php5.6
 sudo service apache2 restart
+
+sudo apt install python3-pip
+
 
 make -f 1.mk formataLinks
