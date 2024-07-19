@@ -2,7 +2,7 @@
 feedback="feedback.csv"
 
 # pega cada numero de processo que anotado pelo aluno (resposta.csv)
-awk -F "#" '{print $2}' $resposta | awk -F "|" '{print $1}' | sort | uniq
+#awk -F "#" '{print $2}' $resposta | awk -F "|" '{print $1}' | sort | uniq
 
 for aluno in ./*/ ; do
 
